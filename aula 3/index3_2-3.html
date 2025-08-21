@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoa</title>
+</head>
+<body>
+    <h2>Cadastro de Pessoa</h2>
+
+    <form action="cadastro.php" method="post">
+        
+        <fieldset class="dados_pessoa">
+            <legend>Dados Pessoais</legend>
+            <ul>
+                <li>
+                    <label for="campo_nome">Nome:</label>
+                    <input type="text" id="campo_nome" name="campo_nome" size="50" required>
+                </li>
+                <li>
+                    <label for="campo_email">E-mail:</label>
+                    <input type="email" id="campo_email" name="campo_email" size="50" required>
+                </li>
+                <li>
+                    <label for="campo_telefone">Telefone:</label>
+                    <input type="tel" id="campo_telefone" name="campo_telefone" placeholder="(99) 99999-9999">
+                </li>
+                <li>
+                    <label for="campo_senha">Senha:</label>
+                    <input type="password" id="campo_senha" name="campo_senha" required>
+                </li>
+                <li>
+                    <label>Sexo:</label>
+                    <input type="radio" id="sexo_m" name="sexo" value="M">
+                    <label for="sexo_m">Masculino</label>
+                    <input type="radio" id="sexo_f" name="sexo" value="F">
+                    <label for="sexo_f">Feminino</label>
+                </li>
+                <li>
+                    <label for="campo_uf">Estado (UF):</label>
+                    <select id="campo_uf" name="campo_uf" required>
+                        <option value="">Selecione...</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="checkbox" id="termos" name="termos_de_uso" value="1" required>
+                    <label for="termos">Aceito os termos de uso</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset class="botoes">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+
+    </form>
+</body>
+</html>
