@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style_JS.css">
+    <script>
+        function validarLogin() {
+            let usuario = document.getElementById("campo_usuario");
+            let senha = document.getElementById("campo_senha");
+
+            usuario.classList.remove("user_pass_fail");
+            senha.classList.remove("user_pass_fail");
+
+            if (usuario.value === "user" && senha.value === "pass") {
+                alert("Login Ok");
+            } else {
+                alert("Usuário ou senha incorretos!");
+                usuario.classList.add("user_pass_fail");
+                senha.classList.add("user_pass_fail");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <label for="campo_usuario">Usuário:</label>
+    <input type="text" id="campo_usuario" name="usuario"><br><br>
+
+    <label for="campo_senha">Senha:</label>
+    <input type="password" id="campo_senha" name="senha"><br><br>
+
+    <button type="button" onclick="validarLogin()">Login</button>
+</body>
+</html>

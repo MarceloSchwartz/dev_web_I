@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+fieldset {
+    border: 1px solid #333;
+
+    background-color: #f2f2f2;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.bloco {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.azul {
+    background-color: #6699ff;
+}
+
+.cinza-claro {
+    background-color: #999999;
+}
+
+.cinza-escuro {
+    background-color: #7f7f7f;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 4px;
+    margin: 3px 0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: 1px solid #333;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Pessoa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Cadastro da Pessoa:</legend>
+
+            <div class="bloco azul">
+                <label for="campo_nome">Nome:</label>
+                <input type="text" id="campo_nome" name="campo_nome" size="30"><br><br>
+
+                <label for="campo_sobrenome">Sobrenome:</label>
+                <input type="text" id="campo_sobrenome" name="campo_sobrenome" size="30"><br><br>
+
+                <label for="campo_email">E-mail:</label>
+                <input type="email" id="campo_email" name="campo_email" size="30">
+            </div>
+
+            <div class="bloco cinza-claro">
+                <label for="campo_data">Data de Nascimento:</label>
+                <input type="date" id="campo_data" name="campo_data"><br><br>
+
+                <label>Sexo:</label>
+                <input type="radio" id="sexo_m" name="sexo" value="M">
+                <label for="sexo_m">Masculino</label>
+                <input type="radio" id="sexo_f" name="sexo" value="F">
+                <label for="sexo_f">Feminino</label>
+            </div>
+
+            <div class="bloco cinza-escuro">
+                <label for="campo_endereco">Endereço:</label>
+                <input type="text" id="campo_endereco" name="campo_endereco" size="40"><br><br>
+
+                <label for="campo_cep">CEP:</label>
+                <input type="text" id="campo_cep" name="campo_cep" size="15"><br><br>
+
+                <label for="campo_uf">Estado (UF):</label>
+                <select id="campo_uf" name="campo_uf">
+                    <option value="">Selecione...</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
