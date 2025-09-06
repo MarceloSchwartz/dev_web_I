@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_calculadora.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="calculator">
+        <input type="text" disabled id="display" />
+        <div class="buttons">
+            <button onclick="clean()">C</button>
+            <button onclick="back()">&lt;</button>
+            <button onclick="insertToDisplay('/')">/</button>
+            <button onclick="insertToDisplay('*')">*</button>
+            <button onclick="insertToDisplay('7')">7</button>
+            <button onclick="insertToDisplay('8')">8</button>
+            <button onclick="insertToDisplay('9')">9</button>
+            <button onclick="insertToDisplay('-')">-</button>
+            <button onclick="insertToDisplay('4')">4</button>
+            <button onclick="insertToDisplay('5')">5</button>
+            <button onclick="insertToDisplay('6')">6</button>
+            <button onclick="insertToDisplay('+')">+</button>
+            <button onclick="insertToDisplay('1')">1</button>
+            <button onclick="insertToDisplay('2')">2</button>
+            <button onclick="insertToDisplay('3')">3</button>
+            <button class="zero" onclick="insertToDisplay('0')">0</button>
+            <button onclick="insertToDisplay('.')">.</button>
+            <button class="igual" onclick="result()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function insertToDisplay(data) {
+            document.querySelector('#display').value += data;
+            document.querySelector('#display').style.backgroundColor = "#f0f0f0"; 
+        }
+
+        function clean() {
+            document.querySelector('#display').value = '';
+            document.querySelector('#display').style.backgroundColor = "#f0f0f0"; 
+        }
+
+        function back() {
+            const display = document.querySelector('#display');
+            display.value = display.value.slice(0, -1);
+            display.style.backgroundColor = "#f0f0f0"; 
+        }
+
+        function result() {
+            const display = document.querySelector('#display');
+            try {
+                const res = eval(display.value);
+                display.value = res;
+                if (res > 0) {
+                    display.style.backgroundColor = "#90ee90";
+                } else if (res < 0) {
+                    display.style.backgroundColor = "#ff7f7f";
+                } else {
+                    display.style.backgroundColor = "#f0f0f0"; 
+                }
+            } catch {
+                display.value = 'Error';
+                display.style.backgroundColor = "#ff7f7f"; 
+            }
+        }
+    </script>
+</body>
+</html>
