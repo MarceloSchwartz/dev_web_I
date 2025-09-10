@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link rel="stylesheet" href="style_tabela.css">
+</head>
+<body>
+<table  id="tabela-notas">
+    <thead id="cabecalho">
+        <tr id="linhaCabecalho">
+            <th rowspan="2">Aluno</th>
+            <th colspan="3">Semestre 01</th>
+            <th colspan="3">Semestre 02</th>
+            <th colspan="3">Semestre 03</th>
+        </tr>
+        <tr >
+            <th>Nota 01</th>
+            <th>Nota 02</th>
+            <th>Nota 03</th>
+
+            <th>Nota 01</th>
+            <th>Nota 02</th>
+            <th>Nota 03</th>
+
+            <th>Nota 01</th>
+            <th>Nota 02</th>
+            <th>Nota 03</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>João</td>
+            <td class="nota">10</td>
+            <td class="nota">8</td>
+            <td class="nota">9</td>
+            <td class="nota">6</td>
+            <td class="nota">8.7</td>
+            <td class="nota">10</td>
+            <td class="nota">6</td>
+            <td class="nota">7</td>
+            <td class="nota">9</td>
+        </tr>
+
+        <tr>
+            <td>Maria</td>
+            <td class="nota">6</td>
+            <td class="nota">3</td>
+            <td class="nota">8</td>
+            <td class="nota">7</td>
+            <td class="nota">3.9</td>
+            <td class="nota">2</td>
+            <td class="nota">10</td>
+            <td class="nota">7</td>
+            <td class="nota">8</td>
+        </tr>
+
+        <tr>
+            <td>José</td>
+            <td class="nota">10</td>
+            <td class="nota">5</td>
+            <td class="nota">3</td>
+            <td class="nota">8</td>
+            <td class="nota">8</td>
+            <td class="nota">3</td>
+            <td class="nota">5</td>
+            <td class="nota">8</td>
+            <td class="nota">6</td>
+        </tr>
+
+        <tr>
+            <td>Paulo</td>
+            <td class="nota">10</td>
+            <td class="nota">10</td>
+            <td class="nota">9</td>
+            <td class="nota">6.5</td>
+            <td class="nota">4</td>
+            <td class="nota">6.4</td>
+            <td class="nota">7.5</td>
+            <td class="nota">5</td>
+            <td class="nota">6</td>
+        </tr>
+
+        <tr>
+            <td>Miguel</td>
+            <td class="nota">6</td>
+            <td class="nota">7</td>
+            <td class="nota">5</td>
+            <td class="nota">3</td>
+            <td class="nota">2.5</td>
+            <td class="nota">4.4</td>
+            <td class="nota">7</td>
+            <td class="nota">8</td>
+            <td class="nota">6.8</td>
+        </tr>
+
+        <tr>
+            <td>Julia</td>
+            <td class="nota">10</td>
+            <td class="nota">9</td>
+            <td class="nota">8</td>
+            <td class="nota">7</td>
+            <td class="nota">6</td>
+            <td class="nota">5</td>
+            <td class="nota">2</td>
+            <td class="nota">4.6</td>
+            <td class="nota">8.7</td>
+        </tr>
+    </tbody>
+</table>
+<button onclick="mediaColuna()">Média das Notas</button>
+<button id="mediaLinha" onclick="mediaLinha()">Média dos Alunos</button>
+<script>
+    function criaColuna(){
+    let linhaCabecalho = document.getElementById('linhaCabecalho');
+
+    let colunaNova = document.createElement('th');
+    colunaNova.innerText="Média Aluno";
+    colunaNova.id = 'coluna-media';
+
+    linhaCabecalho.appendChild(colunaNova);
+}
+
+function extraiInformacao(){
+    let linhaAlunos = document.querySelectorAll("tbody tr");
+    
+    for (let linha of linhaAlunos){
+       let notasLinha = linha.querySelectorAll(".nota");
+       let soma = 0;
+
+
+    for (let celulaNota of notasLinha){
+        let valorCelula = celulaNota.innerText;
+        valorCelula = parseFloat(valorCelula);
+        soma += valorCelula;
+    }
+
+    let media;
+
+    media = soma / notasLinha.length;
+
+    let celulaMedia;
+    celulaMedia = document.createElement('td');
+    celulaMedia.innerText=media.toFixed(2);
+    linha.appendChild(celulaMedia);
+    }
+    
+}
+
+function mediaLinha(){
+    let colunaNova = document.getElementById('coluna-media')
+    if (colunaNova === null){
+    criaColuna();
+    }
+
+    extraiInformacao();
+
+}
+
+function mediaColuna(){
+    let selecionaLinha = document.querySelectorAll("tbody tr");
+    let primeiraColuna = [];
+
+    for (linha of selecionaLinha){
+        let celula = linha.querySelectorAll('td');
+        
+        primeiraColuna.push(celula[1])
+    }
+
+    let soma = 0;
+
+    for (i = 0; i< primeiraColuna.length; i++){
+        soma += parseFloat(primeiraColuna[i].innerText)
+    }
+}
+
+function mediaColuna() {
+    let tabela = document.getElementById("tabela-notas");
+    let linhas = tabela.querySelectorAll("tbody tr");
+
+    let qtdColunas = linhas[0].querySelectorAll(".nota").length;
+
+    let linhaMedia = document.createElement("tr");
+    let celulaTitulo = document.createElement("td");
+    celulaTitulo.innerText = "Média Notas";
+    linhaMedia.appendChild(celulaTitulo);
+
+    for (let col = 0; col < qtdColunas; col++) {
+        let soma = 0;
+        let contador = 0;
+
+        for (let linha of linhas) {
+            let celulas = linha.querySelectorAll(".nota");
+            let valor = parseFloat(celulas[col].innerText);
+
+            if (!isNaN(valor)) {
+                soma += valor;
+                contador++;
+            }
+        }
+
+        let media = contador > 0 ? (soma / contador).toFixed(2) : "-";
+
+        let celulaMedia = document.createElement("td");
+        celulaMedia.innerText = media;
+        linhaMedia.appendChild(celulaMedia);
+    }
+
+    tabela.querySelector("tbody").appendChild(linhaMedia);
+}
+</script>
+</body>
+</html>
