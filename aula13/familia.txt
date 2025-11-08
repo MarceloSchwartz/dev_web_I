@@ -1,11 +1,5 @@
-eu | Gabriel Silva | 25 | lucas.silva@example.com
- | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
-pai | Roberto Silva | 55 | carlos.silva@example.com
- | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
-mae | Patrícia Silva | 53 | marcia.silva@example.com
- | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
-irmao | Thiago Silva | 28 | rafael.silva@example.com
- | Joinville | Santa Catarina | 2025-11-06T01:03:28+01:00
-irma | Juliana Silva | 22 | ana.silva@example.com
- | Florianopolis | Santa Catarina | 2025-11-06T01:03:28+01:00~
- 
+eu | Gabriel Silva | 25 | gabriel.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+pai | Roberto Silva | 55 | roberto.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+mae | Patrícia Silva | 53 | patricia.silva@example.com | Blumenau | Santa Catarina | 2025-11-06T01:03:28+01:00
+irmao | Thiago Silva | 28 | thiago.silva@example.com | Joinville | Santa Catarina | 2025-11-06T01:03:28+01:00
+irma | Juliana Silva | 22 | juliana.silva@example.com | Florianopolis | Santa Catarina | 2025-11-06T01:03:28+01:00
