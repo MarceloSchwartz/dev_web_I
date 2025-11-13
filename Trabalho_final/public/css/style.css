@@ -1,0 +1,149 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;   
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;  
+    padding: 0; 
+    color: #555;
+}
+
+form {     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    width: 100%;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.box label {
+    width: 45px; 
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input[type="radio"]:checked + label {
+    border: 3px solid #000000;
+    transform: scale(1.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#box0, #box1, #box2 { background-color:#FF0000; }
+#box3 { background-color:#ff8000; }
+#box4 { background-color:#ff9900; }
+#box5 { background-color:#ffcc00; }
+#box6 { background-color:#ffee00; }
+#box7 { background-color:#ccff00; }
+#box8 { background-color:#99ff00; }
+#box9 { background-color:#66ff00; }
+#box10 { background-color:#33cc33; }
+
+.blocoFinal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.blocoFinal textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+#botaoProx { 
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    width: 100%; 
+}
+
+#botaoProx:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    margin-top: auto; 
+    width: 100%; 
+    background-color: #343a40; 
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: static; 
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 20px;
+    color: #ccc;
+    font-family: Arial, sans-serif; 
+}
