@@ -2,11 +2,11 @@
 
 
 function sanitize_input($data) {
-    // Função original de sanitização
+
     return filter_var(trim($data), FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
- */
+
 function listar_perguntas() {
     $pdo = getDbConnection(); 
     if (!$pdo) { return []; }

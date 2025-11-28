@@ -175,7 +175,7 @@ if (is_logged_in()) {
     
     <?php if ($pergunta_a_editar): ?>
         <div class="edit-form-box">
-            <h2>✏️ Editando Pergunta ID: <?php echo $pergunta_a_editar['id']; ?></h2>
+            <h2> Editando Pergunta ID: <?php echo $pergunta_a_editar['id']; ?></h2>
             
             <form action="admin.php" method="post">
                 <input type="hidden" name="id_pergunta" value="<?php echo $pergunta_a_editar['id']; ?>">
@@ -251,7 +251,7 @@ if (is_logged_in()) {
     
     <?php if ($dispositivo_a_editar): ?>
         <div class="edit-form-box">
-            <h2>✏️ Editando Dispositivo/Setor ID: <?php echo $dispositivo_a_editar['id']; ?></h2>
+            <h2>Editando Dispositivo/Setor ID: <?php echo $dispositivo_a_editar['id']; ?></h2>
             
             <form action="admin.php" method="post">
                 <input type="hidden" name="id_dispositivo_edit" value="<?php echo $dispositivo_a_editar['id']; ?>">
