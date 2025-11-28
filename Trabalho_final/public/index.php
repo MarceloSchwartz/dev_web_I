@@ -4,12 +4,11 @@ require_once('conexao.php');
 date_default_timezone_set('America/Sao_Paulo');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once('respostas.php'); 
+    require_once('src/respostas.php'); 
     exit;
 }
 
-require_once('perguntas.php'); 
-
+require_once('src/perguntas.php'); 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,6 +41,6 @@ require_once('perguntas.php');
     </div>
     <footer>Sua avaliação espontânea é anônima, nenhuma informação pessoal é solicitada ou armazenada.</footer>
 
-   <script src="script.js"></script>
+   <script src="js/script.js"></script>
 </body>
 </html>

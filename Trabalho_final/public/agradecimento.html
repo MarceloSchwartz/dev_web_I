@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agradecimento</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .redirect-msg {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
     <div class="container agradecimento">
-       
-       <h2>O Estabelecimento agradece sua resposta!</h2>
-       <p>Sua opinião é muito importante para nós, pois nos ajuda a melhorar continuamente nossos serviços.</p>
-       
-       <button onclick="window.location.href='index.php'">Nova Avaliação</button>
+        
+        <h2>O Estabelecimento agradece sua resposta!</h2>
+        <p>Sua opinião é muito importante para nós, pois nos ajuda a melhorar continuamente nossos serviços.</p>
+        
+        <p class="redirect-msg">Você será redirecionado para o início da pesquisa em 3 segundos...</p>
+        
     </div>
+
+    <script src="js/redirecionar.js"></script> 
 </body>
 </html>

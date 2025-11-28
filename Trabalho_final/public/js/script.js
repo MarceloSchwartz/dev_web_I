@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const notaSelecionada = form.querySelector('input[name="nota"]:checked');
             
             if (!notaSelecionada) {
-                event.preventDefault(); // Impede o envio
+                event.preventDefault();
                 alert('Por favor, selecione uma nota de 0 a 10 para continuar.');
                 
                 const box = form.querySelector('.box');
