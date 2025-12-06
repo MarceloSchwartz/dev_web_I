@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Informando Dados para o Banco</legend>
+        <form action="/Aula_11/Exercicios/server.php" method="POST">
+            <label for="nome">Nome:
+                <input type="text" name="nome" id="idNome">
+            </label>
+            <br>
+            <label for="nome">Sobrenome:
+                <input type="text" name="sobrenome" id="idSobrenome">
+            </label>
+            <br>
+            <label for="nome">E-mail:
+                <input type="email" name="email" id="idEmail">
+            </label>
+            <br>
+            <label for="nome">Senha:
+                <input type="password" name="senha" id="idPassword">
+            </label>
+            <br>
+            <label for="nome">Cidade:
+                <input type="text" name="cidade" id="idCidade">
+            </label>
+            <br>
+            <label for="nome">Estado:
+                <input type="text" name="estado" id="idEstado">
+            </label>
+            <br>
+            <input type="submit" value="ENVIAR">
+        </form>
+        <br>
+        <form action="filtragem.php" method="post">
+            <label for="filtro">Filtre pelo Usuário:</label>
+            <input type="text" name="filtroInfo" id="idFiltro" placeholder="Informe o nome do Usuário">
+            <input type="submit" value="FILTRAR">
+        </form>
+
+        <a href="listagem.php" target="_blank" rel="noopener noreferrer">Listagem do Banco de Dados (Sem Filtro)</a>
+        <br>
+
+    </fieldset>
+</body>
+</html>
